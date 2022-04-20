@@ -69,6 +69,7 @@ h1,h2,h3 {
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
+  border-bottom: 1px solid #ECECEC;
 }
 
 .list {
@@ -288,14 +289,8 @@ margin-bottom: var(--margin-typical);
 /* Футер*/
 
 .footer {
-  display: flex;
   background-color: var(--background-footer-color);
 
-}
-.footer-nav {
-align-items: flex-start;
-padding-top: 20px;
-padding-bottom: 60px;
 }
 
 .logo-top,
@@ -309,6 +304,19 @@ padding-bottom: 60px;
   margin-top: 60px;
   margin-bottom: 20px;
 }
+
+.footer-nav {
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  
+}
+.list-nav {
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
 .decoration {
   text-decoration: none;
 }
@@ -320,6 +328,20 @@ padding-bottom: 60px;
 .logo-top-second {
   color: var(--primary-bg-color);
 }
+.adress {
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.71;
+  color: var(--primary-bg-color);
+  text-decoration: none;
+}
+
+.test-nav {
+  position: absolute; 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 
 .connection .link {
   font-weight: 500;
@@ -329,7 +351,7 @@ padding-bottom: 60px;
   color: var(--primary-text-color);
 }
 
-.site-nav  {
+.site-nav .connection {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -345,13 +367,12 @@ padding-bottom: 60px;
   color:var(--accent);
 }
 
-.adress {
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.71;
-  color: var(--primary-bg-color);
-  text-decoration: none;
+.connection {
+  display: inline-block;
+  margin: 6px 0 0 0;
+ 
 }
+
 
 
 
@@ -371,11 +392,8 @@ button {
   display: flex;
   margin-left: -30px;
 }
-  .button-filter {
-  flex-basis: calc((100% - 150%) / 4);
-  margin-left: var(--margin-typical);
-  margin-bottom: 56px;
-  align-content: center;
+.btn-list {
+align-content: center;
 }
 .button-filter {
   display: inline-block;
@@ -392,6 +410,10 @@ button {
   background: var(--primary-bg-color);
 
   padding: 6px 22px;
+
+  flex-basis: calc((100% - 150%) / 4);
+  margin-left: var(--margin-typical);
+  margin-bottom: 56px;
 }
 
 button:hover {
@@ -405,8 +427,9 @@ button:focus {
 /* Проекты */
 .projects li {
   list-style-type: none;
-  
+
 }
+
 .projects {
   display: flex;
   flex-wrap: wrap;
